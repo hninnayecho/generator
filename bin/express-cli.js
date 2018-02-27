@@ -186,6 +186,10 @@ function createApplication (name, path) {
       complete()
     })
 
+    mkdir(path+ '/models', function(){
+      copyTemplate('js/models/index.js', path + '/models/indes.js')
+    })
+
     mkdir(path + '/views', function () {
       switch (program.view) {
         case 'dust':
